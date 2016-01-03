@@ -23,7 +23,6 @@ TARGET_USE_KERNEL_PVR := true
 -include hardware/ti/omap4/BoardConfigCommon.mk
 
 TARGET_NO_BOOTLOADER := true
-TARGET_NO_RADIOIMAGE := true
 
 TARGET_BOARD_OMAP_CPU := 4430
 TARGET_BOOTLOADER_BOARD_NAME := piranha
@@ -49,10 +48,6 @@ SGX_MODULES:
 TARGET_KERNEL_MODULES += SGX_MODULES
 endif
 
-# Init
-TARGET_PROVIDES_INIT := true
-TARGET_PROVIDES_INIT_TARGET_RC := true
-
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 8388608
@@ -75,7 +70,6 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/f_mass_storage/lun%d/
 
 # Wifi
 BOARD_WLAN_DEVICE                := bcmdhd
-BOARD_WLAN_DEVICE_REV            := bcm4330_b1
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
 BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_bcmdhd
@@ -101,9 +95,6 @@ BOARD_BLUEDROID_VENDOR_CONF := device/samsung/espressowifi/bluetooth/vnd_espress
 
 # Charger
 BOARD_CHARGER_SHOW_PERCENTAGE := true
-
-# Sensors
-BOARD_USE_LEGACY_SENSORS_FUSION := false
 
 # Selinux
 BOARD_SEPOLICY_DIRS += \
