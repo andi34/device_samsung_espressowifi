@@ -22,9 +22,6 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/espresso-common/overlay/aosp-common
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# The gps config appropriate for this device
-$(call inherit-product, device/common/gps/gps_us_supl.mk)
-
 LOCAL_PATH := device/samsung/espresso-common
 
 # Enable higher-res drawables while keeping mdpi as primary source
@@ -46,6 +43,9 @@ PRODUCT_PACKAGES += \
     twrp.fstab
 
 # GPS
+# gps config appropriate for this device
+$(call inherit-product, device/common/gps/gps_us_supl.mk)
+
 PRODUCT_PACKAGES += \
     libgpsd-compat
 
