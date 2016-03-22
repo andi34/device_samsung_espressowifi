@@ -23,10 +23,10 @@ TARGET_SCREEN_WIDTH := 600
 $(call inherit-product, vendor/slim/config/common_full_tablet_wifionly.mk)
 
 # SlimRoms specific overlay
-DEVICE_PACKAGE_OVERLAYS += device/samsung/espresso/overlay/slim-common
+DEVICE_PACKAGE_OVERLAYS += device/samsung/espressowifi/overlay/slim-common
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/espresso/aosp_espresso.mk)
+$(call inherit-product, device/samsung/espressowifi/aosp_espressowifi.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_NAME := slim_espresso
+PRODUCT_NAME := slim_espressowifi
