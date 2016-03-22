@@ -1,1 +1,1 @@
-add_lunch_combo slim_espresso-userdebug
+add_lunch_combo slim_espressowifi-userdebug
