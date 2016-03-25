@@ -3,5 +3,10 @@
         "repository": "SlimRoms/kernel_samsung_espresso10",
         "target_path": "kernel/samsung/espresso10",
         "branch": "mm6.0"
+    },
+    {
+        "repository": "SlimRoms/android_external_stlport",
+        "target_path": "external/stlport",
+        "branch": "mm6.0"
     }
 ]
