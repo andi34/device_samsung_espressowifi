@@ -36,6 +36,8 @@ on fs
 # Restorecon
     restorecon_recursive /efs
 
+# pvr module
+    insmod /system/lib/modules/pvrsrvkm_sgx540_120.ko
     start pvrsrvinit
 
     # read only 1 page at a time
