@@ -119,8 +119,6 @@ BOARD_SUPPRESS_EMMC_WIPE := true
 TARGET_RECOVERY_FSTAB := device/samsung/espressowifi/rootdir/etc/fstab.tab2
 RECOVERY_FSTAB_VERSION := 2
 TARGET_RECOVERY_DEVICE_DIRS += device/samsung/espressowifi
-BOARD_CUSTOM_BOOTIMG_MK := device/samsung/espressowifi/custombootimg.mk
-TARGET_NOT_USE_GZIP_RECOVERY_RAMDISK := true
 
 # TWRP
 TW_THEME := landscape_hdpi
