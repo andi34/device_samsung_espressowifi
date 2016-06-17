@@ -20,7 +20,7 @@ TARGET_SCREEN_HEIGHT := 480
 TARGET_SCREEN_WIDTH := 600
 
 # Inherit common Slim configuration
-$(call inherit-product, vendor/slim/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/slim/config/common.mk)
 
 # SlimRoms specific overlay
 DEVICE_PACKAGE_OVERLAYS += device/samsung/espressowifi/overlay/slim-common
