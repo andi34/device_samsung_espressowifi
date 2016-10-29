@@ -36,10 +36,6 @@ PRODUCT_PACKAGES += \
     init.espresso.rc \
     ueventd.espresso.rc
 
-# Recovery Ramdisk
-PRODUCT_PACKAGES += \
-    init.recovery.espresso.rc
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init.espresso.variant.sh:system/bin/init.espresso.variant.sh
 
