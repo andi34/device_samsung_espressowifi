@@ -22,6 +22,9 @@ TARGET_BOARD_OMAP_CPU := 4430
 # Include common omap4 makefile
 $(call inherit-product, hardware/ti/omap4/omap4.mk)
 
+# Include Slim specific additions
+$(call inherit-product, device/samsung/espressowifi/device-slim.mk)
+
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay/aosp-common
 
@@ -39,9 +42,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/fstab.espresso:root/fstab.espresso
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init.espresso.variant.sh:system/bin/init.espresso.variant.sh
-
 # GPS
 # gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
@@ -53,7 +53,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps.xml:system/etc/gps.xml
 
-# Wifi
+# Wi-Fi
 PRODUCT_PACKAGES += \
     libwpa_client \
     hostapd \
@@ -90,12 +90,12 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     audio.usb.default \
     camera.omap4 \
+    e2fsck \
     lights.omap4 \
     libinvensense_mpl \
     sensors.piranha \
     geomagneticd \
-    orientationd \
-    libsecril-client
+    orientationd
 
 # F2FS filesystem
 PRODUCT_PACKAGES += \
